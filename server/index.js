@@ -7,7 +7,11 @@ const router = require('./router');
 const mongoose = require('mongoose');
 
 //DB Setup
-mongoose.connect('mongodb://localhost:27017/auth');
+//this is for local installation of mongodb
+//mongoose.connect('mongodb://localhost:27017/auth');
+
+//this is for mlab which is an online service for mongodb up to 500mb data
+mongoose.connect('mongodb://anup:Password321@ds241489.mlab.com:41489/auth');
 
 //App Setup
 app.use(morgan('combined'));
